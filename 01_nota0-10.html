@@ -2,15 +2,24 @@
 <script>
     /*
     PROBLEMA: NOTA ENTRE 0 E 10
-    Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o usuário informe um valor válido.
+    Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem caso o valor seja inválido e continue pedindo até que 
+    o usuário informe um valor válido.
     */
 
-    //ENTRADA
+    //Entrada
+    let numero = 0;
 
+    //Processamento
+    while (numero < 1 || numero < 10 || isNaN(numero)) {
+        numero = Number(prompt(`Insira um número entre 1 e 10:`));
+        if(numero != 0){
+        alert(`O número inserido foi ${numero}!`);
+    }
+    else if(numero){
+        alert("Valor incorreto")
+    }
+    }
 
-    //PROCESSAMENTO
-
-
-    //SAÍDA
+    //Saída
 
 </script>

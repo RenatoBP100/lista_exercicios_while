@@ -11,11 +11,31 @@
     */
 
     //ENTRADA
-
-
-    //PROCESSAMENTO
-
-
+    let nome = prompt("Me informe seu nome: ").trim().toLowerCase();
+    let idade = Number(prompt("Me informe sua idade atual"));
+    let salario = Number(prompt("Me informe sua idade atual: "));
+    let sexo = prompt("Me informe sua sexualidade").trim().toLowerCase()
+    let estadoCivil = prompt("Me informe seu atual estado civil").trim().toLowerCase()
+    //PROCESSAMENTO)
+    while (nome.length < 3 || (idade < 0 || idade > 150) || salario < 0 || (sexo != "f" && sexo != "m") || (estadoCivil != "s" && estadoCivil != "c" && estadoCivil != "v" && estadoCivil != "d")) {
+        if (nome.length < 3) {
+            alert("O nome informado tem menos de 3 letras e ele tem que ter mais")
+        }
+        else if (idade < 0 || idade > 150) {
+            alert("Sua idade é menor que 0 ou maior que 150 anos")
+        }
+        else if (sexo != "f" && sexo != "m") {
+            alert("Seu sexo esta errado ele só pode ser (f feminino e m masculino)")
+        }
+        else if (estadoCivil != "s" && estadoCivil != "c" && estadoCivil != "v" && estadoCivil != "d") {
+            alert("Seu estado civil tem que ser (s solteiro/ c casamento / v viuvo / d divorciado)");
+        }
+        nome = prompt("Me informe seu nome: ").trim().toLowerCase();
+        idade = Number(prompt("Me informe sua idade atual"));
+        salario = Number(prompt("Me informe sua idade atual: "));
+        sexo = prompt("Me informe sua sexualidade").trim().toLowerCase()
+        estadoCivil = prompt("Me informe seu atual estado civil").trim().toLowerCase()
+    }
     //SAÍDA
-
+    alert("Todas as suas informações estão corretas")
 </script>
