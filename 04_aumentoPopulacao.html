@@ -8,11 +8,19 @@
     */
 
     //ENTRADA
-
+let paisA = 80000
+let paisB = 200000
+let dias = 0;
 
     //PROCESSAMENTO
-
+while (paisA <= paisB) {
+    paisA += paisA * 0.03
+    paisB = paisB * 1.015
+    dias = dias + 1
+    console.log(paisA)
+    console.log(paisB)
+}
 
     //SAÍDA
-
+alert(`A população do paisA só ultrapassa o paisB no dia ${dias} `)
 </script>

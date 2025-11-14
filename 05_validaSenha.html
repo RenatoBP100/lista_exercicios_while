@@ -2,15 +2,22 @@
 <script>
     /*
     PROBLEMA: VALIDAR SENHA
-    Faça um programa que receba uma senha formada de quatro números inteiros, verifique se a senha está correta e, caso não esteja, solicite novamente a senha. Se a senha entrada for a correta, deverá ser apresentada a mensagem “Senha Correta”, caso contrário, “Senha Incorreta”.
+    Faça um programa que receba uma senha formada de quatro números inteiros, verifique se a senha está correta e, caso não esteja, 
+    solicite novamente a senha. Se a senha entrada for a correta, deverá ser apresentada a mensagem “Senha Correta”, caso contrário, 
+    “Senha Incorreta”.
     */
 
     //ENTRADA
-
+let pedidoDesenha = Number(prompt("Me informe uma senha com 4 numeros(Ex: 1234)"));
+let quantidade = string(pedidoDesenha).length;
 
     //PROCESSAMENTO
-
-
+while (quantidade !==4 || pedidoDesenha % 1 != 0 || isNaN(pedidoDesenha)) {
+    alert("Senha incorreta");
+    pedidoDesenha = prompt("Me informe uma senha com 4 numeros(Ex: 1234)");  
+}
     //SAÍDA
-
+if (pedidoDesenha.length == 4) {
+    alert("Senha Correta");
+}
 </script>
