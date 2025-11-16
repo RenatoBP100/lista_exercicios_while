@@ -11,7 +11,8 @@
     4. Branco
     Entre com o seu voto:
 
-    O programa deverá ler os votos dos eleitores e, quando for entrado o número 0, apresentar as seguintes
+    O programa deverá ler os votos dos eleitores e, quando for entrado o número 0, apresentar
+     as seguintes
     informações:
     a) O número de votos de cada candidato;
     b) A porcentagem de votos nulos;
@@ -20,10 +21,64 @@
     */
 
     //ENTRADA
+    let votos = 0;
+    let vencedor = ""
+    let quantidadeVotos = Number(prompt("Me informe a quantidade de votantes que vão participar dessa eleição: "));
+    let totalVoto = quantidadeVotos
+    let votoCandidato1 = 0;
+    let votoCandidato2 = 0;
+    let votoBranco = 0;
+    let votoNulo = 0;
+    let porcentagemBranco = 0
+    let porcentagemNulo = 0
 
 
     //PROCESSAMENTO
-
+   if(quantidadeVotos > -2){
+     while (quantidadeVotos >= -1) {
+        if (quantidadeVotos > 0) {
+            votos = Number(prompt("As opções da urna são \n1-Candidato Joãozinho((precione 1)\n2-Candidato Mariazinha(precione 2)\n3-Voto Nulo(Precione 3)\n4-Voto Branco(precione 4)"))
+            if (votos == 1) {
+                votoCandidato1++
+            }
+            else if (votos == 2) {
+                votoCandidato2++
+            }
+            else if (votos == 3) {
+                votoNulo++
+            }
+            else if (votos == 4) {
+                votoBranco++
+            }
+            else if (votos != 1 && votos != 2 && votos != 3 && votos != 4) {
+                alert("Valor invalido, você colocou um numero invalido")
+            }
+            else if (isNaN(votos) == true) {
+                alert("Valor invalido, informe um numero")
+            }
+        }
+        else if (quantidadeVotos == 0) {
+            porcentagemNulo = totalVoto / votoNulo * 10
+            porcentagemBranco = totalVoto / votoBranco * 10
+            if (votoCandidato1 > votoCandidato2) {
+                vencedor = "Joãozinho"
+            }
+            else if (votoCandidato1 == votoCandidato2) {
+                vencedor = "Empate"
+            }
+            else {
+                vencedor = "Mariazinha"
+            }
+        }
+        else if (quantidadeVotos == -1) {
+            alert(`O resultado das eleições foi:\n O joãozinho teve ${votoCandidato1}, já a Mariazinha teve ${votoCandidato2}\n A porcentagem de votos nulos foi${porcentagemNulo}%\n A porcentagem de votos em branco foi ${porcentagemBranco}%\n o vencedor da eleições foi ${vencedor} `)
+        }
+        quantidadeVotos--
+    }
+   }
+   else{
+    alert("Valor invalido")
+   }
 
     //SAÍDA
 

@@ -2,7 +2,8 @@
 <script>
     /*
     PROBLEMA: PESQUISA DE IDADE
-    Foi feita uma pesquisa entre os habitantes de uma região. Foram coletados os dados de idade, sexo (M/F) e salário. Faça um programa que calcule e mostre:
+    Foi feita uma pesquisa entre os habitantes de uma região. 
+    Foram coletados os dados de idade, sexo (M/F) e salário. Faça um programa que calcule e mostre:
 
     a) A média dos salários do grupo;
     b) A maior e a menor idade do grupo;
@@ -13,11 +14,59 @@
     */
 
     //ENTRADA
-
+    let habitantes = Number(prompt("Me informe a quantidade de habitantes de uma certa região: "));
+    let totalHabitantes = habitantes;
+    let mediaSalario = 0;
+    let maiorIdade = 0;
+    let menorIdade = 0;
+    let menorSalario = 0;
+    let nomeHabitantes = "";
+    let quantidadeMulheres = 0;
+    let sexo = 0;
+    let idade = 0;
+    let salario = 0;
+    let pessoa = "";
+    let sexoPessoa = "";
+    let idadePessoa = 0
 
     //PROCESSAMENTO
+  if (habitantes > -1) {
+      while (habitantes >= 0) {
+        if (habitantes > 0) {
+            idade = Number(prompt("Me informe a sua idade: "));
+            sexo = prompt("Me informe seu sexo (M/Mulher H/Homem):  ").trim().toUpperCase();
+            salario = Number(prompt("Me informe seu salário: "));
+            if (salario > 0) {
+                mediaSalario = mediaSalario + salario;
+            }
+            if (idade < menorIdade) {
+                menorIdade = idade
+            }
+            if (salario > maiorIdade) {
+                maiorIdade = idade
+            }
+            if (sexo == "M") {
+                quantidadeMulheres++
+            }
+            if (salario < menorSalario) {
+                menorSalario = salario
+                pessoa = nomeHabitantes
+                sexoPessoa = sexo
+                idadePessoa = idade
+            }
+        }
+        else if (habitantes == 0) {
+            mediaSalario = mediaSalario / totalHabitantes
+            alert(`A quantidade te habitates da região ${totalHabitantes}\nA Media de salario é ${(mediaSalario).toFixed(2)}\nA maior idade é ${maiorIdade} e a menor idade é ${menorIdade} da região\n A quantidade de mulheres é ${quantidadeMulheres}/nA idade da pessoa com menor salario é ${idadePessoa}anos ja o sexo da pessoa é ${sexoPessoa} o nome ${nomeHabitantes} e o menor salario ${menorSalario}.`)
 
+        }
+        habitantes --
 
+    }
+  }
+else{
+    alert("Valor inválido")
+}
     //SAÍDA
 
 </script>
