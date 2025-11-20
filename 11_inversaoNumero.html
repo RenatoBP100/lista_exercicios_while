@@ -1,21 +1,192 @@
+Pular para o conteúdo principal
+Google Sala de Aula
+Sala de Aula
+1INFO1 - PROG1 [2025]
+Técnico em Informática para Internet
+Início
+Agenda
+Minhas inscrições
+Pendentes
+G
+Geografia 1Info1
+2025
+E
+English - B1 Monday - 1 info 1 e 1 info 3
+Q
+Química 1INFO1
+B
+Biologia - 1 INFO1
+2025
+1
+1INFO1 - Projeto Integrador [2025]
+H
+História
+1INFO1 (2025)
+A
+ARTES I.1info1
+EMI
+F
+FÍSICA 1 - 1INFO
+1
+1INFO1 - PROG1 [2025]
+Técnico em Informática para Internet
+E
+EF 1INFO1 2025
+Turmas arquivadas
+Configurações
+Mural
+Atividades
+Pessoas
+1INFO1 - PROG1 [2025]
+Técnico em Informática para Internet
+Meet
+Próximas atividades
+A data de entrega é hoje
+23:59 – Lista de Exercícios 12 - While
+Atividade: "Lista de Exercícios 13 - Funções"
+Fabio Longo De Moura postou uma nova atividade: Lista de Exercícios 13 - Funções
+Criado em: 16:2316:23
+
+Postada por Fabio Longo De Moura
+Fabio Longo De Moura
+Criado em: 4 de abr.4 de abr. (editado: 15:51)
+Caros, boa tarde.
+
+Nesta playlist estarão os vídeos gravados nas aulas de Programação da turma 1INFO1.
+
+Qualquer dúvida, estou à disposição.
+
+Bons estudos!
+
+Um abraço.
+Programação I - 1INFO1 - YouTube
+https://www.youtube.com/playlist?list=PLGv0p2KVAa0XnnThLJQO7-Etb3k869j5y
+
+
+Postada por Fabio Longo De Moura
+Fabio Longo De Moura
+Criado em: 15:5015:50
+Caros, boa tarde.
+
+Segue, em anexo, arquivos com os exercícios 07 e 11 corrigidos, da lista de exercícios de While.
+
+Bons estudos.
+
+Um abraço.
+07_pesquisaIdade.html
+HTML
+
+11_inversaoNumero.html
+HTML
+
+
+Postada por Fabio Longo De Moura
+Fabio Longo De Moura
+Criado em: 12 de nov.12 de nov.
+Caros, boa tarde.
+
+Seguem em anexo os arquivos sobre os problemas que foram abordados na explicação da estrutura de repetição While / Do While.
+
+Bons estudos.
+
+Um abraço.
+imprimirNumeros_do.html
+HTML
+
+imprimirNumeros_while.html
+HTML
+
+Atividade: "Lista de Exercícios 12 - While"
+Fabio Longo De Moura postou uma nova atividade: Lista de Exercícios 12 - While
+Criado em: 12 de nov.12 de nov.
+
+Postada por Fabio Longo De Moura
+Fabio Longo De Moura
+Criado em: 7 de nov.7 de nov.
+Caros, boa tarde.
+
+Segue em anexo arquivo referente ao exercício 10: Representante de Sala, da lista de For com Variável de Controle.
+
+Bons estudos.
+
+Um abraço.
+10_representanteSala.html
+HTML
+
+
+Postada por Fabio Longo De Moura
+Fabio Longo De Moura
+Criado em: 7 de nov.7 de nov.
+Caros, boa tarde.
+
+Segue em anexo arquivo referente ao exercício 05: Validar Número Primo, da lista de For com Variável de Controle.
+
+Bons estudos.
+
+Um abraço.
+05_validarNumeroPrimo.html
+HTML
+
+
+Postada por Fabio Longo De Moura
+Fabio Longo De Moura
+Criado em: 31 de out.31 de out.
+Caros, boa tarde.
+
+Segue arquivo do exercício 01 da lista de For com Variável de Controle (01_letrasRepetidas.html).
+
+Bons estudos.
+
+Um abraço.
+01_letrasRepetidas.html
+HTML
+
+
+Postada por Fabio Longo De Moura
+Fabio Longo De Moura
+Criado em: 31 de out.31 de out.
+Caros, boa tarde.
+
+Seguem os arquivos dos exemplos abordados na aula de hoje, sobre For com Variável de Controle.
+
+Bons estudos.
+
+Um abraço.
+exemplo1.html
+HTML
+
+exemplo2.html
+HTML
+
+exemplo3.html
+HTML
+
+Atividade: "Lista de Exercícios 11 - For com Variável de Controle"
+Fabio Longo De Moura postou uma nova atividade: Lista de Exercícios 11 - For com Variável de Controle
+Criado em: 31 de out.31 de out. (editado: 14 de nov.)
 <script>
     //Problema: Inversão de Número
     /*
-    Escreva um programa que peça a
-     usuário um número e inverta sua ordem usando uma estrutura de repetição while.
+    Escreva um programa que peça ao usuário um número e inverta sua ordem usando uma estrutura de repetição while.
     Exemplo:
     Entrada: 12345
     Saída: 54321
     */
 
     //ENTRADA
-let numero = Number(prompt("Me informe um numero"))
-let numeroGuardado = numero
+    let numero = prompt(`Informe um número:`);
+    let numeroInvertido = "";
+
     //PROCESSAMENTO
-while(numero == numeroGuardado){
-    
-}
+    let i = numero.length - 1;
+    while (i >= 0) {
+        let nrAtual = numero[i];
+        numeroInvertido = numeroInvertido + nrAtual;
+        i = i - 1;
+    }
 
     //SAÍDA
-
+    document.write(`O número invertido é ${numeroInvertido}`);
 </script>
+11_inversaoNumero.html
+Exibindo 11_inversaoNumero.html…

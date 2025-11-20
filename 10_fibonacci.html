@@ -1,16 +1,27 @@
 <script>
-    //Problema: Fibonacci
-    /*
-    Pergunte ao usuário quantos números da sequência de Fibonacci deseja obter, 
-    usando a estrutura de repetição while.
-    */
-
-    //ENTRADA
-
-
-    //PROCESSAMENTO
-
-
-    //SAÍDA
-    
+  //Entrada
+    let numero = parseInt(prompt("Quantos números de Fibonacci você deseja?"));
+    while (isNaN(numero) || numero < 0) {
+        numero = parseInt(prompt("Digite um número inteiro não-negativo:"));
+    }
+    //Processamento
+    let a = 0;
+    let b = 1;
+    let i = 0;
+    let resultado = "";
+    while (i < numero) {
+        if (i === 0) {
+            resultado += a;
+        } else if (i === 1) {
+            resultado += ", " + b;
+        } else {
+            let next = a + b;
+            resultado += ", " + next;
+            a = b;
+            b = next;
+        }
+        i++;
+    }
+    //Saida
+    alert("Sequência: " + resultado);
 </script>
